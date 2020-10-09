@@ -19,9 +19,9 @@ function App() {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => {setRobots(users)});
-  });
+  }, []);
   if(robots.length === 0){
-    return <h1>Loading...</h1>
+    return <h1> Loading... </h1>
   }else{
     return (
       <div className='tc'>
